@@ -637,8 +637,8 @@ h3 {
 
 .merchant-links img {
   display: block;
-  max-width: min(190px, 100%);
-  max-height: 76px;
+  max-width: min(238px, 100%);
+  max-height: 95px;
   width: auto;
   height: auto;
   object-fit: contain;
