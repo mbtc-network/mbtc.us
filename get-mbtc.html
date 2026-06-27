@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Get MAGA Bitcoin (MBTC) on Base using the embedded swap widget."
+    />
+    <title>Get $MBTC | MAGA Bitcoin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="get-page">
+    <canvas id="chainCanvas" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="brand" href="index.html#top" aria-label="MAGA Bitcoin home">
+        <span class="brand-mark"><img src="assets/mbtc-logo.png" alt="" aria-hidden="true" /></span>
+        <span>
+          <strong>MBTC</strong>
+          <small>MAGA Bitcoin</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteNav">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="siteNav" class="site-nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#token">Token</a>
+        <a href="index.html#find-us">Find Us</a>
+        <a href="podcast.html">MBTC Podcast</a>
+        <a href="press.html">Press</a>
+        <a href="https://magabitcoin.shop/" target="_blank" rel="noreferrer">MBTC Shop</a>
+        <a href="get-mbtc.html" aria-current="page">Get $MBTC</a>
+        <a href="https://basescan.org/token/0x3898257dd2cd6d2a3b6e3435f73568a725262b9b" target="_blank" rel="noreferrer">Contract</a>
+      </nav>
+
+      <a class="connect-button" href="index.html#top">
+        <span class="pulse"></span>
+        <span>Connect</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="get-hero section-shell">
+        <div class="get-copy">
+          <p class="eyebrow">Base Network</p>
+          <h1>Get $MBTC directly on Base.</h1>
+          <p>
+            Use the embedded widget to access MAGA Bitcoin through a familiar swap flow.
+            Confirm token details before signing any wallet transaction.
+          </p>
+          <div class="get-contract">
+            <span>MBTC on Base Contract Address</span>
+            <code>0x3898257dd2cd6d2a3b6e3435f73568a725262b9b</code>
+          </div>
+        </div>
+
+        <div id="mbtc-widget" class="widget-target" aria-label="Get MBTC swap widget">
+          <p>Loading widget...</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://mobiitz.github.io/widget/widget.js"></script>
+    <script src="background.js"></script>
+    <script>
+      const nav = document.querySelector("#siteNav");
+      const menuToggle = document.querySelector(".menu-toggle");
+      menuToggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      window.addEventListener("DOMContentLoaded", () => {
+        if (!window.BungeeWidget) {
+          document.querySelector("#mbtc-widget").innerHTML = "<p>Widget failed to load. Please refresh the page.</p>";
+          return;
+        }
+        window.BungeeWidget.init({ targetId: "mbtc-widget" });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Press releases and media updates from MAGA Bitcoin (MBTC)."
+    />
+    <title>Press | MAGA Bitcoin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="press-page">
+    <canvas id="chainCanvas" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="brand" href="index.html#top" aria-label="MAGA Bitcoin home">
+        <span class="brand-mark"><img src="assets/mbtc-logo.png" alt="" aria-hidden="true" /></span>
+        <span>
+          <strong>MBTC</strong>
+          <small>MAGA Bitcoin</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteNav">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="siteNav" class="site-nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#token">Token</a>
+        <a href="index.html#find-us">Find Us</a>
+        <a href="podcast.html">MBTC Podcast</a>
+        <a href="press.html" aria-current="page">Press</a>
+        <a href="https://magabitcoin.shop/" target="_blank" rel="noreferrer">MBTC Shop</a>
+        <a href="get-mbtc.html">Get $MBTC</a>
+        <a href="https://basescan.org/token/0x3898257dd2cd6d2a3b6e3435f73568a725262b9b" target="_blank" rel="noreferrer">Contract</a>
+      </nav>
+
+      <a class="connect-button" href="index.html#top">
+        <span class="pulse"></span>
+        <span>Connect</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="press-hero section-shell">
+        <p class="eyebrow">MAGA Bitcoin</p>
+        <h1>Press</h1>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Press</strong>
+        <p>Official MAGA Bitcoin press releases and media updates.</p>
+      </div>
+      <a href="index.html#top">Back to home</a>
+    </footer>
+
+    <script src="background.js"></script>
+    <script>
+      const nav = document.querySelector("#siteNav");
+      const menuToggle = document.querySelector(".menu-toggle");
+      menuToggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="MAGA Bitcoin (MBTC) is a Base network token built around digital ownership, farming, and on-chain transparency."
+    />
+    <title>MAGA Bitcoin | MBTC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="chainCanvas" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="MAGA Bitcoin home">
+        <span class="brand-mark"><img src="assets/mbtc-logo.png" alt="" aria-hidden="true" /></span>
+        <span>
+          <strong>MBTC</strong>
+          <small>MAGA Bitcoin</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteNav">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="siteNav" class="site-nav">
+        <a href="#about">About</a>
+        <a href="#token">Token</a>
+        <a href="#find-us">Find Us</a>
+        <a href="podcast.html">MBTC Podcast</a>
+        <a href="press.html">Press</a>
+        <a href="https://magabitcoin.shop/" target="_blank" rel="noreferrer">MBTC Shop</a>
+        <a href="get-mbtc.html">Get $MBTC</a>
+        <a href="https://basescan.org/token/0x3898257dd2cd6d2a3b6e3435f73568a725262b9b" target="_blank" rel="noreferrer">Contract</a>
+      </nav>
+
+      <button class="connect-button" type="button" data-open-wallet>
+        <span class="pulse"></span>
+        <span data-wallet-label>Connect</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">Live on Base. Community-powered. Built for the future.</p>
+          <h1>MAGA Bitcoin is a Base network token for digital ownership.</h1>
+          <p class="hero-text">
+            MAGA Bitcoin combines tokenized opportunity with a fast-growing global community.
+            MBTC runs on Base with low-cost transactions, on-chain transparency, and wallet access
+            through
+            <a class="wallet-link" href="https://metamask.io/download" target="_blank" rel="noreferrer">MetaMask</a>,
+            <a class="wallet-link" href="https://trustwallet.com/download" target="_blank" rel="noreferrer">Trust Wallet</a>,
+            and
+            <a class="wallet-link" href="https://www.coinbase.com/wallet/downloads" target="_blank" rel="noreferrer">Base Wallet</a>.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="get-mbtc.html">Buy MBTC</a>
+            <a class="primary-action" href="https://www.coinbase.com/price/maga-bitcoin-base-0x3898257dd2cd6d2a3b6e3435f73568a725262b9b-token" target="_blank" rel="noreferrer">Now Available on Coinbase</a>
+          </div>
+        </div>
+
+        <div class="hero-panel" aria-label="MBTC token snapshot">
+          <div class="orbital">
+            <span class="coin-core"><img src="assets/mbtc-logo.png" alt="MAGA Bitcoin logo" /></span>
+            <span class="ring ring-one"></span>
+            <span class="ring ring-two"></span>
+            <span class="node node-one"></span>
+            <span class="node node-two"></span>
+            <span class="node node-three"></span>
+          </div>
+          <dl class="metrics">
+            <div>
+              <dt>Network</dt>
+              <dd>Base</dd>
+            </div>
+            <div>
+              <dt>Symbol</dt>
+              <dd>MBTC</dd>
+            </div>
+            <div>
+              <dt>Total Supply</dt>
+              <dd>1.1B</dd>
+            </div>
+            <div>
+              <dt>Initial Mint</dt>
+              <dd>$0.03</dd>
+            </div>
+            <div>
+              <dt>Live Price</dt>
+              <dd data-price-usd>Loading</dd>
+            </div>
+            <div class="contract-metric">
+              <dt>MBTC on Base Contract Address</dt>
+              <dd>
+                <code data-contract-address>0x3898257dd2cd6d2a3b6e3435f73568a725262b9b</code>
+                <button class="copy-contract" type="button" data-copy-contract aria-label="Copy MBTC contract address">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8 7a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-1v1a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3h1V7Zm2 1h3a3 3 0 0 1 3 3v3h1a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v1Zm-3 2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H7Z" />
+                  </svg>
+                </button>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Live MBTC Base market ticker">
+        <div>
+          <span>MBTC / USD <strong data-price-usd>Loading</strong></span>
+          <span>24H <strong data-price-change>--</strong></span>
+          <span>Liquidity <strong data-liquidity>--</strong></span>
+          <span>Base Network</span>
+          <span>Contract <strong>0x3898257dd2cd6d2a3b6e3435f73568a725262b9b</strong></span>
+        </div>
+        <div aria-hidden="true">
+          <span>MBTC / USD <strong data-price-usd>Loading</strong></span>
+          <span>24H <strong data-price-change>--</strong></span>
+          <span>Liquidity <strong data-liquidity>--</strong></span>
+          <span>Base Network</span>
+          <span>Contract <strong>0x3898257dd2cd6d2a3b6e3435f73568a725262b9b</strong></span>
+        </div>
+      </section>
+
+      <section id="about" class="section-shell split-section">
+        <div>
+          <p class="eyebrow">About MBTC</p>
+          <h2>Digital ownership on the Base network.</h2>
+        </div>
+        <div class="copy-stack">
+          <p>
+            Powered by Empactus AI, MAGA Bitcoin is structured for transparency, scalability,
+            and sustainability on Base. Token distribution prioritizes community growth,
+            ecosystem expansion, and long-term participation.
+          </p>
+          <div class="link-grid">
+            <a href="https://www.mbtc.us/white-paper" target="_blank" rel="noreferrer">Whitepaper</a>
+            <a href="#find-us">Find Us</a>
+            <a href="https://www.coingecko.com/en/coins/maga-bitcoin" target="_blank" rel="noreferrer">CoinGecko</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="token" class="section-shell token-section">
+        <div class="section-heading">
+          <p class="eyebrow">Token Details</p>
+          <h2>Built for participation, utility, and long-term ecosystem growth.</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <span class="feature-icon">01</span>
+            <h3>Community Economy</h3>
+            <p>MBTC centers participation in a growing token ecosystem and active community network.</p>
+          </article>
+          <article>
+            <span class="feature-icon">02</span>
+            <h3>Mining Exposure</h3>
+            <p>The project links decentralized value with an expanding Bitcoin mining operation.</p>
+          </article>
+          <article>
+            <span class="feature-icon">03</span>
+            <h3>On-chain Transparency</h3>
+            <p>The Base ERC-20 contract is available for public inspection on BaseScan.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="find-us" class="section-shell ecosystem-section find-us-section">
+        <div class="section-heading">
+          <p class="eyebrow">Social Media</p>
+          <h2>Find us across social media and community channels.</h2>
+          <p>
+            Follow official MAGA Bitcoin social media channels for announcements,
+            community updates, podcast drops, and Base network news.
+          </p>
+        </div>
+        <div class="ecosystem-actions social-actions" aria-label="Find us on social media">
+          <a href="https://x.com/magabitcoinusa" target="_blank" rel="noreferrer" aria-label="Find MAGA Bitcoin on X">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2h3.3l-7.2 8.2L23.5 22h-6.7l-5.2-6.8L5.6 22H2.3l7.7-8.8L1.8 2h6.8l4.7 6.2L18.9 2Zm-1.2 17.9h1.8L7.6 4H5.7l12 15.9Z" /></svg>
+            <span>X / Twitter</span>
+          </a>
+          <a href="https://t.me/mbtcofficial" target="_blank" rel="noreferrer" aria-label="Join MAGA Bitcoin on Telegram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.8 4.2 18.5 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1L18 6.5c.4-.4-.1-.6-.6-.3L5.9 13.4.9 11.8c-1.1-.3-1.1-1.1.2-1.6L20.5 2.8c.9-.3 1.7.2 1.3 1.4Z" /></svg>
+            <span>Telegram</span>
+          </a>
+          <a href="https://www.instagram.com/maga_bitcoin/" target="_blank" rel="noreferrer" aria-label="Find MAGA Bitcoin on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.4a4.6 4.6 0 1 1 0 9.2 4.6 4.6 0 0 1 0-9.2Zm0 2a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2Zm5-2.3a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z" /></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.youtube.com/@MAGABitcoin" target="_blank" rel="noreferrer" aria-label="Watch MAGA Bitcoin on YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" /></svg>
+            <span>YouTube</span>
+          </a>
+          <a href="https://github.com/mbtc-network" target="_blank" rel="noreferrer" aria-label="Find MBTC Network on GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C16.3 4.9 17.3 5.2 17.3 5.2c.7 1.6.2 2.9.1 3.2.8.9 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z" /></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>MBTC</strong>
+        <p>© 2026. MAGA Bitcoin LLC, Florida Limited Liability Corporation.</p>
+      </div>
+      <a href="https://basescan.org/token/0x3898257dd2cd6d2a3b6e3435f73568a725262b9b" target="_blank" rel="noreferrer">
+        Base: 0x3898257d...725262b9b
+      </a>
+    </footer>
+
+    <div class="wallet-modal" data-wallet-modal hidden>
+      <div class="wallet-backdrop" data-close-wallet></div>
+      <section class="wallet-dialog" role="dialog" aria-modal="true" aria-labelledby="walletTitle">
+        <button class="wallet-close" type="button" data-close-wallet aria-label="Close wallet dialog">×</button>
+        <p class="eyebrow">Wallet Access</p>
+        <h2 id="walletTitle">Connect to MBTC</h2>
+        <div class="wallet-list">
+          <button type="button" data-wallet="metamask">
+            <span>MetaMask</span>
+            <small data-wallet-state="metamask">Detecting</small>
+          </button>
+          <button type="button" data-wallet="trust">
+            <span>Trust Wallet</span>
+            <small data-wallet-state="trust">Detecting</small>
+          </button>
+          <button type="button" data-wallet="base">
+            <span>Base Wallet</span>
+            <small data-wallet-state="base">Detecting</small>
+          </button>
+        </div>
+        <p class="wallet-status" data-wallet-status>Choose a wallet provider installed in this browser.</p>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
